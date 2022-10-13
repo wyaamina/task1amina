@@ -1,0 +1,129 @@
+{
+  "metadata": {
+    "language_info": {
+      "codemirror_mode": {
+        "name": "python",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8"
+    },
+    "kernelspec": {
+      "name": "python",
+      "display_name": "Python (Pyodide)",
+      "language": "python"
+    }
+  },
+  "nbformat_minor": 4,
+  "nbformat": 4,
+  "cells": [
+    {
+      "cell_type": "code",
+      "source": "На вход подается строка, состоящая из одного числа. Напишите программу, которая удваивает его.",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "num = await int(input(\"num = \"))\nprint(num*2)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "Вводится число. Вывести его квадрат.",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "num = await int(input(\"num = \"))\nprint(num**(2))",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "Вводятся часы, минуты и секунды. Вывести, сколько секунд прошло с полуночи.\nВывести, какая часть суток прошла (число от 0 до 1).",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "hours = await int(input(\"hours = \"))\nminutes = await int(input(\"minutes = \"))\nseconds = await int(input(\"seconds = \"))\nsecondsfromthemidnight = ((hours*60*60) + (minutes*60) + seconds)\nprint(\"seconds:\", secondsfromthemidnight)\nprint(\"day part:\", secondsfromthemidnight/(24*60*60))",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "Вводится число. Вывести, оканчивается ли оно на цифру 7, не используя приведение к строке и операции над строками",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "num = await int(input(\"num = \"))\nprint((num % 10) == 7)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "Вводятся коэффициенты уравнения ax2+bx+c=0. Вывести его корни(не забыть проверить, что a не равно 0)",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "a = await float(input(\"a = \"))\nb = await float(input(\"b = \"))\nc = await float(input(\"c = \"))\ndisc = b ** 2 - 4 * a * c\nif a!=0 and disc>0:\n    print(\"x1 = \", ((-b+disc**(1/2))/(2*a)), \"x2 = \", (-b+disc**(1/2))/(2*a)) \nelif a!=0 and disc==0:\n    print(\"x = \", (-b+disc**(1/2))/(2*a))\nelif a==0:\n    print(\"x = \", -c/b)\nelse:\n    print(\"no solutions\")",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "Вводятся три числа. Вывести максимум из них.",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "a = await int(input(\"a = \"))\nb = await int(input(\"b = \"))\nc = await int(input(\"c = \"))\nif a < b:\n    a = b\nif a < c:\n    a = c\nprint(a)",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "Вводится число. Вывести среднее арифметическое (с точностью до двух знаков после запятой) тех чисел в диапазоне от единицы до введённого числа, которые делятся 5 или являются четными.",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "a = await int(input(\"a = \"))\nn = 1\nb = 0\nc = 0\nwhile n <= a:\n    if n % 5 == 0 or n % 2 == 0:\n        b = b + n\n        c = c +1\n    n = n + 1\nprint(b/c)",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
